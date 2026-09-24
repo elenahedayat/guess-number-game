@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="character" id="character" aria-hidden="true">
+      <img
+        id="avatar-img"
+        class="avatar-img"
+        src="character.gif"
+        alt="Character"
+      />
+      <p class="character-hint" id="character-hint">Make a guess!</p>
+    </aside>
+
+    <main class="game">
+      <p class="range">Guess a number between <strong>1</strong> and <strong>100</strong></p>
+      <label class="label" for="guess-input"></label>
+      <form class="guess-form" id="guess-form">
+        <input
+          type="number"
+          id="guess-input"
+          min="1"
+          max="100"
+          placeholder="What is my number?"
+          autocomplete="off"
+        />
+        <button type="submit" class="guess-btn">GUESS</button>
+      </form>
+
+      <p class="message" id="message" hidden></p>
+      <p class="attempts">Attempts: <span id="attempts">0</span></p>
+      <button type="button" class="reset-btn" id="reset-btn">↺ Reset</button>
+    </main>
+  </div>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</body>
+</html>
